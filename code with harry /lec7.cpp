@@ -4,7 +4,7 @@ int c = 45;
 int main()
 {
     //*****Build in data types*****
-    // cout<<"Enter the vale of a : ";
+    // cout<<"Enter the value of a : ";
     // int a,b,c;
     // cin>>a;
     // cout<<"Enter the value of b ";

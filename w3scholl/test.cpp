@@ -31,8 +31,10 @@ using namespace std;
 //     return 0;
 // }
 int main(){
-    int myAge = 25;
-    int votingAge = 18;
-    cout<<(myAge>=votingAge);
-    return 0;
+    cout<<"Hellow Nancy,Welcome to programing"<<endl;
+    int x = 4;
+    int & y = x;
+    cout<<y;
+    float n = 5.5;
+    cout<<"The value of n is "<<int(n);
 }

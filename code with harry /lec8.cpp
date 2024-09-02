@@ -16,10 +16,10 @@ int main(){
     // cout<<pi;
 
     //*****Manipulator incpp*****
-    int a = 3 , b = 44 ,c = 5475;
-    cout<<"the value withoit setw is  "<<a<<endl;
-    cout<<"the value withoit setw is  "<<b<<endl;
-    cout<<"the value withoit setw is  "<<c<<endl;
+    int a = 553 , b = 24 ,c = 5475;
+    cout<<"the value without setw is "<<a<<endl;
+    cout<<"the value without setw is "<<b<<endl;
+    cout<<"the value without setw is "<<c<<endl;
     
     cout<<"the value of a with setw is "<<setw(4)<<a<<endl;
     cout<<"the value of b with setw is "<<setw(4)<<b<<endl;

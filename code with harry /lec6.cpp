@@ -13,6 +13,7 @@ int main(){
     cout<<"The value of a/b is "<<a/b<<endl;
     cout<<"The value of a%b is "<<a%b<<endl;
     cout<<"The value of a++ is "<<a++<<endl;
+    cout<<"Now the value of a is "<<a<<endl;
     cout<<"The value of a-- is "<<a--<<endl; 
     cout<<"The value of ++a is "<<++a<<endl;
     cout<<"The value of --a is "<<--a<<endl;
@@ -29,7 +30,7 @@ int main(){
      cout<<"The value of a>b is "<<(a>b)<<endl;
      cout<<endl;
      //logical operator 
-     cout<<"Following are the logical operator in c++";
+     cout<<"Following are the logical operator in c++"<<endl;
      cout<<"The value of logical  and operator ((a==b) && (a<b))"<<((a==b) && (a<b))<<endl;
      cout<<"The value of logical or operator ((a==b) || (a<b))"<<((a==b) || (a<b))<<endl;
      cout<<"The value of logical or operator (!(a==b)) is "<<(!(a==b))<<endl;

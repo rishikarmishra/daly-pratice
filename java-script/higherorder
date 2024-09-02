@@ -1,0 +1,20 @@
+const radius = [2,3,4,5];
+function area(radius){
+    return Math.PI * radius *radius;
+}
+function cercumference(radius){
+    return 2 * Math.PI * radius; 
+}
+function diameter(radius){
+    return 2 * radius;
+}
+const calculate = function(radius,logic){
+    const output = [];
+    for(i = 0;i<radius.length ;i++){
+        output.push(logic(radius[i]));
+    }
+    return output;
+}
+console.log(calculate(radius,area));
+console.log(calculate(radius,cercumference));
+console.log(calculate(radius,diameter));
