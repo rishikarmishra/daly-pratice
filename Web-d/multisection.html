@@ -1,0 +1,26 @@
+<form id="multiStepForm">
+    <fieldset>
+      <legend>Step 1</legend>
+      <input type="text" name="step1data">
+      <button type="button" onclick="nextStep()">Next</button>
+    </fieldset>
+    <fieldset style="display:none;">
+      <legend>Step 2</legend>
+      <input type="text" name="step2data">
+      <button type="button" onclick="previousStep()">Previous</button>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+  
+  <script>
+    function nextStep() {
+      document.querySelectorAll('fieldset')[0].style.display = 'none';
+      document.querySelectorAll('fieldset')[1].style.display = 'block';
+    }
+  
+    function previousStep() {
+      document.querySelectorAll('fieldset')[1].style.display = 'none';
+      document.querySelectorAll('fieldset')[0].style.display = 'block';
+    }
+  </script>
+  

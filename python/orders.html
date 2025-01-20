@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+</head>
+<body>
+    <h1>Orders Summary</h1>
+    <ul>
+        {% for order in orders %}
+            <li>{{ order[1] }} x{{ order[2] }} = {{ order[3] }} Rs</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Menu</a>
+</body>
+</html>

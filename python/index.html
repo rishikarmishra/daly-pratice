@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Management System</title>
+</head>
+<body>
+    <h1>Welcome to the Café!</h1>
+    <h2>Menu</h2>
+    <form method="POST" action="/order">
+        <label for="item_name">Item:</label>
+        <select name="item_name">
+            {% for item in menu %}
+                <option value="{{ item[1] }}">{{ item[1] }} - {{ item[2] }} Rs</option>
+            {% endfor %}
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" required>
+        <button type="submit">Place Order</button>
+    </form>
+    <a href="/orders">View Orders</a>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KfC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+        /* Styling for the category bar */
+        .sidebar {
+            background-color: #f4f4f4;
+            width: 200px;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+            position: relative;
+        }
+        /* Dropdown for subcategories */
+        .dropdown {
+            display: none;
+            position: absolute;
+            left: 200px;
+            top: 0;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            list-style-type: none;
+        }
+        .dropdown li {
+            margin: 5px 0;
+        }
+        /* Show dropdown on hover */
+        .sidebar ul li:hover .dropdown {
+            display: block;
+        }
+        /* Styling for the main content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        header {
+            background-color: red;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        /* Earbud ad section */
+        .earbud-ad {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .earbud-ad img {
+            width: 300px;
+            height: auto;
+        }
+        .price {
+            font-size: 24px;
+            color: green;
+            margin: 10px 0;
+        }
+        .discount {
+            text-decoration: line-through;
+            color: gray;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar for categories -->
+    <div class="sidebar">
+        <h2>Categories</h2>
+        <ul id="categoryList">
+            <!-- Categories will be populated by JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <header>
+            <h1>KFC </h1>
+        </header>
+
+        <!-- Earbud ad section -->
+        <div class="earbud-ad">
+            <h2>Chiken Wings</h2>
+            <img src="https://example.com/earbuds.jpg" alt="Wireless Earbuds">
+            <p class="price">
+                <span class="discount">$79.99</span> 
+                $49.99
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Array of categories with subcategories
+        const categories = [
+            {
+                name: 'chicken Wings ',
+                subcategories: ['Mobiles', 'Laptops', 'Headphones']
+            },
+            {
+                name: 'Vada-pav',
+                subcategories: ["Men's Clothing", "Women's Clothing", 'Accessories']
+            },
+            {
+                name: 'code',
+                subcategories: ['Furniture', 'Decor', 'Kitchen Appliances']
+            },
+            {
+                name: 'Books',
+                subcategories: ['Fiction', 'Non-fiction', 'Comics']
+            },
+            {
+                name: 'Health & Beauty',
+                subcategories: ['Skincare', 'Haircare', 'Supplements']
+            }
+        ];
+
+        // Function to dynamically create dropdown menus
+        const categoryList = document.getElementById('categoryList');
+
+        categories.forEach(category => {
+            // Create main category item
+            const li = document.createElement('li');
+            li.textContent = category.name;
+
+            // Create dropdown container
+            const dropdown = document.createElement('ul');
+            dropdown.classList.add('dropdown');
+
+            // Append subcategories to the dropdown
+            category.subcategories.forEach(subcategory => {
+                const subLi = document.createElement('li');
+                subLi.textContent = subcategory;
+                dropdown.appendChild(subLi);
+            });
+
+            // Append dropdown to main category
+            li.appendChild(dropdown);
+            categoryList.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
+\

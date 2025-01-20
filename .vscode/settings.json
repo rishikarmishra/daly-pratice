@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-x64",
+    "cmake.enabledOutputParsers": [
+        "cmake",
+        "gcc"
+    ]
+}
